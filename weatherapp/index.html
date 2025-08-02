@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🌦 SkyView Weather</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app-container glass">
+    <header>
+      <div class="logo-title">
+        <img src="https://img.icons8.com/emoji/48/sun-behind-cloud.png" alt="Logo" class="logo" />
+        <h1>Weather</h1>
+      </div>
+      <div class="clock" id="clock">--:--</div>
+      <button id="darkModeToggle">🌙</button>
+    </header>
+
+    <section class="search-section">
+      <input type="text" id="cityInput" placeholder="Enter city name" />
+      <button onclick="getWeather()">Search</button>
+      <button onclick="getLocationWeather()">📍 My Location</button>
+    </section>
+
+    <section id="weatherResult" class="weather-section">
+      <div class="loader" id="loader" style="display: none;"></div>
+    </section>
+
+    <section id="forecastSection" class="forecast-section"></section>
+
+    <section id="extras" class="extras">
+      <div class="extra-card" id="humidityCard">💧 Humidity: --%</div>
+      <div class="extra-card" id="windCard">💨 Wind: -- km/h</div>
+      <div class="extra-card" id="sunriseCard">🌅 Sunrise: --</div>
+      <div class="extra-card" id="sunsetCard">🌇 Sunset: --</div>
+    </section>
+
+    <section class="history">
+      <h3>Recent Searches</h3>
+      <ul id="historyList"></ul>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
